@@ -76,14 +76,14 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://www.narekh.dev/og-image.jpg"
+          content={siteConfig.profilePictureUrl}
         />
-        <meta property="og:url" content="https://www.narekh.dev" />
+        <meta property="og:url" content={siteConfig.profilePictureUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
         <meta
           name="linkedin:site"
-          content="https://www.linkedin.com/in/narekhovhannisyan"
+          content={siteConfig.socialMedia.linkedIn}
         />
       </head>
       <body className={`${inter.className} flex flex-col min-h-screen`}>

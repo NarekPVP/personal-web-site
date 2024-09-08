@@ -1,4 +1,5 @@
 import { navigation } from "@/config/navigation";
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -8,7 +9,7 @@ const Footer = () => {
         <div className="md:flex md:items-center md:justify-between">
           <div className="flex justify-center space-x-6 md:order-2">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 target="_blank"
@@ -17,7 +18,7 @@ const Footer = () => {
               >
                 <span className="sr-only">{item.name}</span>
                 <item.icon aria-hidden="true" className="h-5 w-5" />
-              </a>
+              </Link>
             ))}
           </div>
           <div className="mt-8 md:order-1 md:mt-0">

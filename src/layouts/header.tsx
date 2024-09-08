@@ -3,16 +3,19 @@ import { ModeToggle } from "@/components/mode-toggle";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { siteConfig } from "@/config/site";
-import Image from "next/image";
 
 const Header = () => {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-background/75 py-6 backdrop-blur-sm">
+    <header className="fixed inset-x-0 top-0 z-50 bg-background/75 py-6 backdrop-blur-sm px-2">
       <nav className="container flex max-w-3xl items-center justify-between mx-auto">
         <div className="flex-1">
-          <Link href="/" className="font-serif text-2xl font-bold">
-            NH
-          </Link>
+          <Avatar className="w-16 h-16 border-solid border-2 dark:border-white border-black">
+            <AvatarImage
+              src={siteConfig.profilePictureUrl}
+              alt={`@${siteConfig.username}`}
+            />
+            <AvatarFallback>NH</AvatarFallback>
+          </Avatar>
         </div>
 
         <ul className="flex items-center gap-6 text-sm font-light text-muted-foreground sm:gap-10">
