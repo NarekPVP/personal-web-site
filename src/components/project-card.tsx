@@ -2,10 +2,10 @@
 
 import { TProject } from "@/data/projects";
 import Link from "next/link";
-import Image from "next/image";
 import React from "react";
 import useCurrentLangCode from "@/hooks/useCurrentLangCode";
 import { useTranslations } from "next-intl";
+import { Gallery } from "react-grid-gallery";
 
 type TProjectCardProps = {
   project: TProject;
@@ -18,12 +18,42 @@ const ProjectCard: React.FC<TProjectCardProps> = ({ project }) => {
   return (
     <div
       key={project.slug}
-      className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
+      className="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:shadow-2xl w-full"
     >
+      <div className="p-8 space-y-4">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+          {project.title}
+        </h2>
+        <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+          {lang === "am" && project.contentAM}
+          {lang === "en" && project.contentEN}
+        </p>
+        {project.githubRepoUrl && (
+          <Link
+            href={project.githubRepoUrl}
+            className="inline-block mt-4 text-blue-600 dark:text-blue-400 font-semibold underline hover:text-blue-800 dark:hover:text-blue-200"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            🌟 {t("ProjectsPage.viewOnGithub")}
+          </Link>
+        )}
+        {project.images && (
+          <div className="mt-6">
+            <Gallery
+              images={project.images}
+              enableImageSelection={false}
+              rowHeight={180}
+            />
+          </div>
+        )}
+      </div>
       {project.video && (
-        <div className="relative pb-9/16">
+        <div className="relative w-full pb-[56.25%]">
+          {" "}
+          {/* 16:9 Aspect Ratio */}
           <video
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover rounded-t-xl"
             controls
             src={project.video}
           >
@@ -31,37 +61,6 @@ const ProjectCard: React.FC<TProjectCardProps> = ({ project }) => {
           </video>
         </div>
       )}
-      <div className="p-6">
-        <h2 className="text-3xl font-semibold text-gray-900 dark:text-white mb-4">
-          {project.title}
-        </h2>
-        <p className="text-gray-700 dark:text-gray-300 mb-4">
-          {lang === "am" && project.contentAM}
-          {lang === "en" && project.contentEN}
-        </p>
-        {project.githubRepoUrl && (
-          <Link
-            href={project.githubRepoUrl}
-            className="text-blue-600 dark:text-blue-400 underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            🌟 {t("ProjectsPage.viewOnGithub")}
-          </Link>
-        )}
-        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {project.images?.map((image, index) => (
-            <Image
-              key={index}
-              src={image}
-              width={100}
-              height={100}
-              alt={`Project ${project.title} Screenshot ${index + 1}`}
-              className="w-full h-auto rounded-lg shadow-md"
-            />
-          ))}
-        </div>
-      </div>
     </div>
   );
 };
