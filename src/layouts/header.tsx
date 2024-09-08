@@ -9,7 +9,7 @@ const Header = () => {
     <header className="fixed inset-x-0 top-0 z-50 bg-background/75 py-6 backdrop-blur-sm px-2">
       <nav className="container flex max-w-3xl items-center justify-between mx-auto">
         <div className="flex-1">
-          <Avatar className="w-16 h-16 border-solid border-2 dark:border-white border-black">
+          <Avatar className="w-16 h-16 border-solid border-2 border-white">
             <AvatarImage
               src={siteConfig.profilePictureUrl}
               alt={`@${siteConfig.username}`}

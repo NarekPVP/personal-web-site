@@ -23,8 +23,7 @@ const Footer = () => {
           </div>
           <div className="mt-8 md:order-1 md:mt-0">
             <p className="text-center text-xs leading-5 text-muted-foreground">
-              &copy; {new Date().getFullYear()} Your Company. All rights
-              reserved.
+              Follow me on social media
             </p>
           </div>
         </div>
