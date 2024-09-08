@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
-import "../css/globals.css";
+import "../../css/globals.css";
 import Header from "@/layouts/header";
 import Footer from "@/layouts/footer";
 import { siteConfig } from "@/config/site";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -56,11 +58,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
+  const messages = await getMessages();
+
   return (
     <html lang="en">
       <head>
@@ -74,17 +80,11 @@ export default function RootLayout({
           property="og:description"
           content="Full-stack developer specializing in ASP.NET Web API, React, Next.js, and React Native."
         />
-        <meta
-          property="og:image"
-          content={siteConfig.profilePictureUrl}
-        />
+        <meta property="og:image" content={siteConfig.profilePictureUrl} />
         <meta property="og:url" content={siteConfig.profilePictureUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
-        <meta
-          name="linkedin:site"
-          content={siteConfig.socialMedia.linkedIn}
-        />
+        <meta name="linkedin:site" content={siteConfig.socialMedia.linkedIn} />
       </head>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <ThemeProvider
@@ -93,9 +93,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          <main className="grow">{children}</main>
-          <Footer />
+          <NextIntlClientProvider messages={messages}>
+            <Header />
+            <main className="grow">{children}</main>
+            <Footer />
+          </NextIntlClientProvider>
         </ThemeProvider>
       </body>
     </html>

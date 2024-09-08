@@ -1,8 +1,12 @@
 import { navigation } from "@/config/navigation";
+import { siteConfig } from "@/config/site";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
+  const t = useTranslations();
+
   return (
     <footer className="fixed inset-x-0 bottom-0 py-8 bg-background">
       <div className="container max-w-3xl mx-auto">
@@ -22,9 +26,13 @@ const Footer = () => {
             ))}
           </div>
           <div className="mt-8 md:order-1 md:mt-0">
-            <p className="text-center text-xs leading-5 text-muted-foreground">
-              Follow me on social media
-            </p>
+            <Link
+              href={siteConfig.githubRepoUrl}
+              target="_blank"
+              className="text-center text-xs leading-5 text-muted-foreground"
+            >
+              {t("Footer.content")}
+            </Link>
           </div>
         </div>
       </div>

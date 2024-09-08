@@ -1,0 +1,25 @@
+{
+  "Common": {
+    "email": "Email",
+    "phone": "Phone",
+    "followMe": "Follow Me"
+  },
+  "Header": {
+    "posts": "Posts",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "ContactPage": {
+    "title": "Get in Touch",
+    "contactTitle": "Contact Information",
+    "contactBottomTitle": "Alternatively, reach out through social media!",
+    "NewProjectInfo": {
+      "title": "Coming Soon!",
+      "content": "My new project is coming. I can't wait to share it with you!",
+      "buttonContent": "Soon"
+    }
+  },
+  "Footer": {
+    "content": "My website is open source. Click here to view the code."
+  }
+}
