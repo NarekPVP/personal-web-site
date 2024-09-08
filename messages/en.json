@@ -19,6 +19,10 @@
       "buttonContent": "Soon"
     }
   },
+  "ProjectsPage": {
+    "title": "My Projects",
+    "viewOnGithub": "View on Github"
+  },
   "Footer": {
     "content": "My website is open source. Click here to view the code."
   }
