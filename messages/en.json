@@ -2,12 +2,20 @@
   "Common": {
     "email": "Email",
     "phone": "Phone",
-    "followMe": "Follow Me"
+    "followMe": "Follow Me",
+    "downloadCV": "Download CV"
   },
   "Header": {
     "posts": "Posts",
     "projects": "Projects",
     "contact": "Contact"
+  },
+  "WelcomePage": {
+    "title": "👋 About Me",
+    "content1": " Hi, I'm <strong>Narek Hovhannisyan</strong> 👨‍💻, a software developer from Yerevan, Armenia. I love creating software that is both powerful and easy to use 💡.",
+    "content2": "On the back end, I use .NET (C#) and Node.js to build reliable and efficient systems ⚙️. For the front end, I work with React, Vite, Next.js, and Vue.js to design user-friendly websites and apps 💻. I also develop mobile apps using Expo and React Native 📱, which allows me to make apps that work on both iOS and Android.",
+    "content3": "I enjoy solving problems 🧠 and learning new tools 🛠️ to improve my skills.",
+    "content4": "Feel free to check out my projects, connect with me, or download my CV to learn more! 📂"
   },
   "ContactPage": {
     "title": "Get in Touch",

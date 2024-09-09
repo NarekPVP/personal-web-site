@@ -14,13 +14,15 @@ const Header = () => {
       <nav className="container flex max-w-3xl items-center justify-between mx-auto">
         {/* Avatar on the far left */}
         <div className="flex items-center justify-start flex-1">
-          <Avatar className="w-14 h-14 border-solid border-2 border-white">
-            <AvatarImage
-              src={siteConfig.profilePictureUrl}
-              alt={`@${siteConfig.username}`}
-            />
-            <AvatarFallback>NH</AvatarFallback>
-          </Avatar>
+          <Link href="/">
+            <Avatar className="w-14 h-14 border-solid border-2 border-white">
+              <AvatarImage
+                src={siteConfig.profilePictureUrl}
+                alt={`@${siteConfig.username}`}
+              />
+              <AvatarFallback>NH</AvatarFallback>
+            </Avatar>
+          </Link>
         </div>
 
         {/* Navigation content in the center */}

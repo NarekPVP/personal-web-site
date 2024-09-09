@@ -1,19 +1,9 @@
-import React from "react";
+import Welcome from "@/components/welcome";
 
 const Page = () => {
   return (
-    <div className="min-h-screen dark:bg-black dark:text-white pt-24">
-      <div className="container max-w-3xl mx-auto py-10">
-        <h1 className="text-4xl font-bold mb-4">Welcome to the Dark Page</h1>
-        <p className="text-lg">
-          This is a basic page with a black background and white text.
-        </p>
-        <p className="mt-4">
-          Feel free to add more content here. The header and footer have their
-          own background styling, so they won't be affected by this page's
-          background.
-        </p>
-      </div>
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-800 dark:text-white pt-24 flex flex-col items-center pb-12">
+      <Welcome />
     </div>
   );
 };
