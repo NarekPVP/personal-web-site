@@ -12,7 +12,7 @@ const Welcome = () => {
   const t = useTranslations();
 
   const handleDownloadCV = () => {
-    window.open("/CV.docx", "_blank");
+    window.open(siteConfig.CVUrl, "_blank");
   };
 
   return (

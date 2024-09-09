@@ -6,6 +6,7 @@ type TSiteConfig = {
   email: string
   phone: string
   address: string
+  CVUrl: string
   socialMedia: {
     linkedIn: string
     telegram: string
@@ -23,6 +24,7 @@ export const siteConfig: TSiteConfig = {
   email: "hnarek2005@gmail.com",
   phone: "+374 99 691 641",
   address: "Yerevan, Armenia",
+  CVUrl: "/CV.docx",
   socialMedia: {
     linkedIn: "https://www.linkedin.com/in/narek-hovhannisyan-241544255",
     telegram: "https://t.me/NarekDev",
