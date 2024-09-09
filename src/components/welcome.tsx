@@ -16,7 +16,7 @@ const Welcome = () => {
   };
 
   return (
-    <div className="container max-w-4xl mx-auto px-6">
+    <div className="container max-w-4xl mx-auto px-6 pb-12">
       <div className="flex flex-col items-center mb-8">
         <Image
           src={siteConfig.profilePictureUrl}
