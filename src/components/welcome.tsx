@@ -16,7 +16,7 @@ const Welcome = () => {
   };
 
   return (
-    <div className="container max-w-4xl mx-auto py-12 px-6">
+    <div className="container max-w-4xl mx-auto px-6">
       {/* Avatar Section */}
       <div className="flex flex-col items-center mb-8">
         <Image
