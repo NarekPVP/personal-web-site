@@ -52,6 +52,7 @@ const ContactMe = () => {
               <div className="flex space-x-4">
                 {navigation.map((Nav) => (
                   <Link
+                    key={Nav.name}
                     href={siteConfig.socialMedia.twitter}
                     className="w-10 h-10 dark:text-white rounded-full flex items-center justify-center"
                   >
