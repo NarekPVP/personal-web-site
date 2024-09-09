@@ -2,6 +2,7 @@ import { Image as TImage } from "react-grid-gallery";
 
 export type TProject = {
   title: string;
+  projectType: "FullStack" | "BackEnd" | "FrontEnd" | "Mobile" | "Desktop";
   headerLineEN: string;
   headerLineAM: string;
   contentEN: string;
@@ -17,10 +18,13 @@ export const projects: TProject[] = [
   // NMath
   {
     title: "NMath",
+    projectType: "FullStack",
     headerLineEN: "Open Source function research app.",
     headerLineAM: "Բաց կոդով ֆունկցիայի հետազոտության հավելված:",
-    contentEN: "The long english text here...",
-    contentAM: "The long armenian text here...",
+    contentEN:
+      "This project is a math app I built using .NET C# for the backend, React for the web, and React Native (Expo) for mobile. The app lets users enter a math function, then finds things like the derivative and other details. It also draws a graph of the function. There is a history feature, so users can easily look up their previous functions if they want to research them again. The app has a settings section for customization and works smoothly on both web and mobile platforms.",
+    contentAM:
+      "Այս նախագիծը մաթեմատիկական հավելված է, որը ես ստեղծել եմ՝ օգտագործելով .NET C#՝ backend-ի համար, React՝ վեբի համար, և React Native (Expo)՝ բջջային հավելվածի համար: Հավելվածը թույլ է տալիս օգտատերերին մուտքագրել մաթեմատիկական ֆունկցիա, այնուհետև հետազոտել այն։ Կա պատմության առանձնահատկություն, այնպես որ օգտատերերը կարող են հեշտությամբ փնտրել իրենց նախկին հետազոտված ֆունկցիաները, եթե ցանկանում են նորից հետազոտել դրանք: Հավելվածն ունի կարգավորումների բաժին և սահուն աշխատում է ինչպես վեբ, այնպես էլ բջջային հարթակներում:",
     slug: "nmath",
     tags: [
       {

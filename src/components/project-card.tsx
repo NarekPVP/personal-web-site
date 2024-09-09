@@ -32,7 +32,7 @@ const ProjectCard: React.FC<TProjectCardProps> = ({ project }) => {
         </Link>
         <div>
           <div className="space-y-1">
-            <h4 className="text-sm font-medium leading-none">FullStack</h4>
+            <h4 className="text-sm font-medium leading-none">{project.projectType}</h4>
             <p className="text-sm text-muted-foreground">
               {lang === "am" && project.headerLineAM}
               {lang === "en" && project.headerLineEN}
@@ -97,6 +97,7 @@ const ProjectCard: React.FC<TProjectCardProps> = ({ project }) => {
             controls
             src={project.video}
           >
+            {/* TODO: Translate this to Armenian */}
             Your browser does not support the video tag.
           </video>
         </div>
