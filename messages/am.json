@@ -31,6 +31,10 @@
     "title": "Իմ Պրոեկտները",
     "viewOnGithub": "Դիտել Github-ում"
   },
+  "PostsPage": {
+    "title": "Գրառումներ",
+    "noPostsFound": "Առայժմ ոչ մի գրառում չկա"
+  },
   "Footer": {
     "content": "Կայքը բաց կոդով է (Open Source) Կոդը դիտելու համար սեղմեք այս տեքստի վրա:"
   }

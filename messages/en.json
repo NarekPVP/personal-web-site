@@ -31,6 +31,10 @@
     "title": "My Projects",
     "viewOnGithub": "View on Github"
   },
+  "PostsPage": {
+    "title": "Posts",
+    "noPostsFound": "No Posts Available for now"
+  },
   "Footer": {
     "content": "My website is open source. Click here to view the code."
   }
