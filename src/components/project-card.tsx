@@ -23,14 +23,16 @@ const ProjectCard: React.FC<TProjectCardProps> = ({ project }) => {
       className="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:shadow-2xl w-full"
     >
       <div className="p-8 space-y-4">
-        <Link href={project.githubRepoUrl ?? "#"} target="_blank" className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+        <Link
+          href={project.githubRepoUrl ?? "#"}
+          target="_blank"
+          className="text-3xl font-bold text-gray-900 dark:text-white mb-4"
+        >
           {project.title}
         </Link>
         <div>
           <div className="space-y-1">
-            <h4 className="text-sm font-medium leading-none">
-              FullStack
-            </h4>
+            <h4 className="text-sm font-medium leading-none">FullStack</h4>
             <p className="text-sm text-muted-foreground">
               {lang === "am" && project.headerLineAM}
               {lang === "en" && project.headerLineEN}
@@ -77,8 +79,11 @@ const ProjectCard: React.FC<TProjectCardProps> = ({ project }) => {
           <div className="mt-6">
             <Gallery
               images={project.images}
-              enableImageSelection={false}
+              enableImageSelection={true}
               rowHeight={180}
+              onClick={(_, item) => {
+                window.open(item.src, "_blank");
+              }}
             />
           </div>
         )}

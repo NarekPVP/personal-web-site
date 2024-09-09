@@ -18,7 +18,7 @@ export const projects: TProject[] = [
   {
     title: "NMath",
     headerLineEN: "Open Source function research app.",
-    headerLineAM: "Բաց կոդով Ֆունկցիայի հետազոտման հավելված:",
+    headerLineAM: "Բաց կոդով ֆունկցիայի հետազոտության հավելված:",
     contentEN: "The long english text here...",
     contentAM: "The long armenian text here...",
     slug: "nmath",
@@ -89,4 +89,3 @@ export const projects: TProject[] = [
     video: "/nmath/NMath-showcase.mp4",
   },
 ];
-
