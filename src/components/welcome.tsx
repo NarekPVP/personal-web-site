@@ -17,10 +17,9 @@ const Welcome = () => {
 
   return (
     <div className="container max-w-4xl mx-auto px-6">
-      {/* Avatar Section */}
       <div className="flex flex-col items-center mb-8">
         <Image
-          src={siteConfig.profilePictureUrl} // Your avatar image path
+          src={siteConfig.profilePictureUrl}
           alt="Your Avatar"
           width={150}
           height={150}
@@ -29,7 +28,6 @@ const Welcome = () => {
         <h1 className="text-5xl font-bold mt-6">{t("WelcomePage.title")}</h1>
       </div>
 
-      {/* Content Section */}
       <div className="text-left">
         <p
           className="text-xl mb-4"
@@ -43,7 +41,6 @@ const Welcome = () => {
         />
       </div>
 
-      {/* Button Section */}
       <div className="flex flex-wrap justify-center gap-4 mt-10">
         <Button
           onClick={handleDownloadCV}
