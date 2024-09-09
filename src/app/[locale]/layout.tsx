@@ -56,6 +56,9 @@ export const metadata: Metadata = {
       },
     ],
   },
+  icons: {
+    icon: '/favicon.ico'
+  }
 };
 
 export default async function RootLayout({
@@ -91,7 +94,7 @@ export default async function RootLayout({
           attribute="class"
           defaultTheme="system"
           enableSystem
-          disableTransitionOnChange
+          // disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
             <Header />

@@ -7,7 +7,7 @@ const ProjectsPage = () => {
   const t = useTranslations();
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 py-16 px-6 pt-36 pb-36">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-800 py-16 px-6 pt-36 pb-36">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-12 text-center">
           🛠️ {t("ProjectsPage.title")}

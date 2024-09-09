@@ -2,9 +2,12 @@ import { Image as TImage } from "react-grid-gallery";
 
 export type TProject = {
   title: string;
+  headerLineEN: string;
+  headerLineAM: string;
   contentEN: string;
   contentAM: string;
   slug: string;
+  tags?: { label: string; url: string; color: string; textColor: string }[];
   githubRepoUrl?: string;
   images?: TImage[];
   video?: string;
@@ -14,9 +17,37 @@ export const projects: TProject[] = [
   // NMath
   {
     title: "NMath",
+    headerLineEN: "Open Source function research app.",
+    headerLineAM: "Բաց կոդով Ֆունկցիայի հետազոտման հավելված:",
     contentEN: "The long english text here...",
     contentAM: "The long armenian text here...",
     slug: "nmath",
+    tags: [
+      {
+        label: ".NET",
+        url: "https://dotnet.microsoft.com",
+        color: "#512BD4",
+        textColor: "#fff",
+      },
+      {
+        label: "C#",
+        url: "https://dotnet.microsoft.com/en-us/languages/csharp",
+        color: "#4CBB17",
+        textColor: "#fff",
+      },
+      {
+        label: "React",
+        url: "https://react.dev",
+        color: "#58C4DC",
+        textColor: "#fff",
+      },
+      {
+        label: "React Native",
+        url: "https://reactnative.dev",
+        color: "#087EA4",
+        textColor: "#fff",
+      },
+    ],
     githubRepoUrl: "https://github.com/NarekPVP/NMath",
     images: [
       {
@@ -58,3 +89,4 @@ export const projects: TProject[] = [
     video: "/nmath/NMath-showcase.mp4",
   },
 ];
+
