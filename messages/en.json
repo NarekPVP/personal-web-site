@@ -35,6 +35,16 @@
     "title": "Posts",
     "noPostsFound": "No Posts Available for now"
   },
+  "Settings": {
+    "title": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "ThemeDropdown": {
+      "dark": "Dark",
+      "light": "Light",
+      "system": "System"
+    }
+  },
   "Footer": {
     "content": "My website is open source. Click here to view the code."
   }

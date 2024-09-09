@@ -1,13 +1,23 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { ModeToggle } from "@/components/mode-toggle";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { siteConfig } from "@/config/site";
 import { useTranslations } from "next-intl";
 import LanguageToggle from "@/components/language-toggle";
+import SettingsSheet from "@/components/settings-sheet";
+import { Settings } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const t = useTranslations();
+  const [settingsOpen, setSettingsOpen] = useState<boolean>(false);
+
+  const handleSettingsClick = () => {
+    setSettingsOpen(!settingsOpen);
+  };
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-background/75 py-2 backdrop-blur-sm px-2">
@@ -40,10 +50,13 @@ const Header = () => {
 
         {/* Language and Theme Toggle on the far right */}
         <div className="flex items-center justify-end flex-1 space-x-4">
-          <LanguageToggle />
-          <ModeToggle />
+          <Button onClick={handleSettingsClick}>
+            <Settings className="h-4 w-4" />
+          </Button>
+          
         </div>
       </nav>
+      <SettingsSheet open={settingsOpen} onOpenChange={setSettingsOpen} />
     </header>
   );
 };
