@@ -53,7 +53,7 @@ const ContactMe = () => {
                 {navigation.map((Nav) => (
                   <Link
                     key={Nav.name}
-                    href={siteConfig.socialMedia.twitter}
+                    href={Nav.href}
                     className="w-10 h-10 dark:text-white rounded-full flex items-center justify-center"
                   >
                     <Nav.icon />
