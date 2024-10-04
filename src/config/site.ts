@@ -26,7 +26,7 @@ export const siteConfig: TSiteConfig = {
   address: "Yerevan, Armenia",
   CVUrl: "/CV.docx",
   socialMedia: {
-    linkedIn: "https://www.linkedin.com/in/narek-hovhannisyan-241544255",
+    linkedIn: "https://www.linkedin.com/in/narek-hovhannisyan-dev",
     telegram: "https://t.me/NarekDev",
     twitter: "https://x.com/hnarek2005",
     github: "https://github.com/NarekPVP",
