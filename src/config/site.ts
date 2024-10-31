@@ -13,6 +13,7 @@ type TSiteConfig = {
     twitter: string
     github: string
     instagram: string
+    telegram: string
   }
 };
 
@@ -30,6 +31,7 @@ export const siteConfig: TSiteConfig = {
     telegram: "https://t.me/NarekDev",
     twitter: "https://x.com/hnarek2005",
     github: "https://github.com/NarekPVP",
-    instagram: "https://www.instagram.com/hovhannisyan4893"
+    instagram: "https://www.instagram.com/hovhannisyan4893",
+    telegram: "https://t.me/NarekDev"
   }
 };
