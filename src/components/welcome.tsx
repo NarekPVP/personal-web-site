@@ -41,7 +41,22 @@ const Welcome = () => {
         />
       </div>
 
-      <div className="flex flex-wrap justify-center gap-4 mt-10">
+      <Link
+        href="https://sigmatrack.app"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-between w-full mt-10 px-5 py-4 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover:opacity-90 transition-opacity"
+      >
+        <div>
+          <p className="font-bold text-sm">{t("WelcomePage.sigmaTrackBadge")}</p>
+          <p className="text-xs opacity-90 mt-0.5">{t("WelcomePage.sigmaTrackSubline")}</p>
+        </div>
+        <span className="text-xs font-semibold px-3 py-1.5 rounded-md bg-white/20 border border-white/40 whitespace-nowrap">
+          {t("WelcomePage.sigmaTrackVisit")}
+        </span>
+      </Link>
+
+      <div className="flex flex-wrap justify-center gap-4 mt-4">
         <Button
           onClick={handleDownloadCV}
           className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg flex items-center gap-2"

@@ -15,6 +15,50 @@ export type TProject = {
 };
 
 export const projects: TProject[] = [
+  // Sigma Track
+  {
+    title: "Sigma Track",
+    projectType: "FullStack",
+    headerLineEN: "Subscription tracking app.",
+    headerLineAM: "Բաժանորդագրությունների հետևման հավելված:",
+    contentEN:
+      "Sigma Track is a full-stack subscription management app built with Next.js and TypeScript. It lets you track all your recurring subscriptions in one place, showing upcoming payments, spending insights, and custom categories. Features include an intuitive dashboard, a quick-add subscription modal, and category organisation with emoji support.",
+    contentAM:
+      "Sigma Track-ը Next.js-ով և TypeScript-ով կառուցված բաժանորդագրությունների կառավարման հավելված է: Այն թույլ է տալիս հետևել բոլոր կրկնվող բաժանորդագրություններին մեկ տեղում՝ ցուցադրելով առաջիկա վճարումները, ծախսերի վերլուծությունը և հատուկ կատեգորիաները: Ֆունկցիոնալությունը ներառում է ինտուիտիվ dashboard, բաժանորդագրություն ավելացնելու modal պատուհան և emoji-ի աջակցությամբ կատեգորիաների կազմակերպում:",
+    slug: "sigma-track",
+    tags: [
+      {
+        label: "Next.js",
+        url: "https://nextjs.org",
+        color: "#000000",
+        textColor: "#fff",
+      },
+      {
+        label: "React",
+        url: "https://react.dev",
+        color: "#58C4DC",
+        textColor: "#fff",
+      },
+      {
+        label: "TypeScript",
+        url: "https://www.typescriptlang.org",
+        color: "#3178C6",
+        textColor: "#fff",
+      },
+    ],
+    images: [
+      { src: "/sigma-track/01-landing-hero.png", width: 1440, height: 900 },
+      { src: "/sigma-track/01-landing-page.png", width: 1440, height: 1616 },
+      { src: "/sigma-track/02-dashboard-empty.png", width: 1440, height: 900 },
+      { src: "/sigma-track/03-dashboard-with-subscriptions.png", width: 1440, height: 900 },
+      { src: "/sigma-track/04-upcoming.png", width: 1440, height: 900 },
+      { src: "/sigma-track/05-insights.png", width: 1440, height: 900 },
+      { src: "/sigma-track/06-categories.png", width: 1440, height: 900 },
+      { src: "/sigma-track/07-settings.png", width: 1440, height: 900 },
+      { src: "/sigma-track/08-add-subscription-modal.png", width: 1440, height: 900 },
+      { src: "/sigma-track/09-categories-new-emoji-mode.png", width: 1440, height: 900 },
+    ],
+  },
   // NMath
   {
     title: "NMath",

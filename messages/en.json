@@ -12,6 +12,9 @@
   },
   "WelcomePage": {
     "title": "👋 About Me",
+    "sigmaTrackBadge": "🚀 Sigma Track - Live in Production",
+    "sigmaTrackSubline": "Subscription tracking app · sigmatrack.app",
+    "sigmaTrackVisit": "Visit →",
     "content1": " Hi, I'm <strong>Narek Hovhannisyan</strong> 👨‍💻, a software developer from Yerevan, Armenia. I love creating software that is both powerful and easy to use 💡.",
     "content2": "On the back end, I use .NET (C#) and Node.js to build reliable and efficient systems ⚙️. For the front end, I work with React, Vite, Next.js, and Vue.js to design user-friendly websites and apps 💻. I also develop mobile apps using Expo and React Native 📱, which allows me to make apps that work on both iOS and Android.",
     "content3": "I enjoy solving problems 🧠 and learning new tools 🛠️ to improve my skills.",
