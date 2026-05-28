@@ -24,7 +24,7 @@ export const siteConfig: TSiteConfig = {
   email: "hnarek2005@gmail.com",
   phone: "+374 99 691 641",
   address: "Yerevan, Armenia",
-  CVUrl: "/CV.docx",
+  CVUrl: "/CV.pdf",
   socialMedia: {
     linkedIn: "https://www.linkedin.com/in/narek-hovhannisyan-dev",
     telegram: "https://t.me/NarekDev",
